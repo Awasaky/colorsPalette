@@ -28,8 +28,8 @@ local webPalette =  palette"return palette" -- assign palette of web colors to l
 local coronaSDKPalette = palette"return coronaPalette" --assign palette of Corona SDK colors  to local variable coronaSDKPalette
 
 print( colorsList("return webColor")("#fc0fc0") ) --0.98823529411765	0.058823529411765	0.75294117647059
-print( colorsList("return palette", "ярко-розовый")) --#fc0fc0
-print( unpack(colorsList("return coronaPalette", "ярко-розовый")) ) -- -0.98823529411765	0.058823529411765	0.75294117647059
+print( colorsList("return palette", "hot pink")) --#fc0fc0
+print( unpack(colorsList("return coronaPalette", "hot pink")) ) -- -0.98823529411765	0.058823529411765	0.75294117647059
 ```
 RUSSIAN
 -------
@@ -40,7 +40,7 @@ https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%86%D0%B2%
 Использование:
 ```
 local palette = require"colorsPalette" -- используется require для подключения модуля
-object:setFillColor( palette("тёмно-оливковый"[, цветАльфаКанала]) ) -- имя цвета указывается в кавычках
+object:setFillColor( palette("темно-оливковый"[, цветАльфаКанала]) ) -- имя цвета указывается в кавычках
 ```
 Дополнительно можно задать цветАльфаКанала вещественным числом в диапазоне 0 - 1.
 
