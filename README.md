@@ -2,7 +2,7 @@ colorsPalette
 =============
 simple Lua / Corona SDK Library - return predefined in stroke names or user web colors in Corona SDK format
 
-[Demo preview / посмотреть демонстрацию](https://i.imgur.com/65hZQoq.gifv)
+[Watch demo / Посмотреть демонстрацию](https://i.imgur.com/65hZQoq.gifv)
 
 ENGLISH
 -------
