@@ -1,11 +1,14 @@
 colorsPalette
 =============
 simple Lua / Corona SDK Library - return predefined in stroke names or user web colors in Corona SDK format
+https://i.imgur.com/65hZQoq.gifv
 
 ENGLISH
 -------
 Color palette, names and definitions based on web colors in article:
 https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2
+
+Total number of colors 232 English names and 350 Russian names
 Usage:
 ```
 local palette = require"colorsPalette" -- use require to add module
@@ -31,6 +34,8 @@ RUSSIAN
 -------
 Цветовая палитра, имена и значения базируются на статье:
 https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2
+
+Общее число цветов - 232 английских имени и 350 русских имен
 Использование:
 ```
 local palette = require"colorsPalette" -- используется require для подключения модуля
