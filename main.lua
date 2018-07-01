@@ -1,44 +1,60 @@
 --SAFEWORK = true
+math.randomseed( os.time() )
 
 local colorsList = require"colorsPalette"
 
-local circ1 = display.newCircle( 50, 50, 50 ) -- каждый
-circ1:setFillColor( colorsList("красный") )
+-- каждый охотник желает знать где сидит фазан
+local rainbow = {"красный", "orange", "желтый", "green", "голубой", "blue", "фиолетовый" }
 
-local circ2 = display.newCircle( 150, 50, 50 ) -- охотник
-circ2:setFillColor( colorsList("orange") )
+for i = 1, #rainbow do
+	local rect = display.newRect( 35 + (i-1) * 40, 120, 40, 200 )
+	rect:setFillColor( colorsList(rainbow[i]) )
+end
 
-local circ3 = display.newCircle( 250, 50, 50 ) -- желает
-circ3:setFillColor( colorsList("желтый") )
-
-local circ4 = display.newCircle( 50, 150, 50 ) -- знать
-circ4:setFillColor( colorsList("green") )
-
-local circ5 = display.newCircle( 150, 150, 50 ) -- где
-circ5:setFillColor( colorsList("голубой") )
-
-local circ6 = display.newCircle( 250, 150, 50 ) -- сидит
-circ6:setFillColor( colorsList("blue") )
-
-local circ7 = display.newCircle( 50, 250, 50 ) -- фазан
-circ7:setFillColor( colorsList("фиолетовый") )
---
 print( colorsList"return webColor" )
 print( colorsList"return palette" )
 print( colorsList"return coronaPalette" )
-print( "webColor ", colorsList("return webColor", "#fc0fc0"))
+print( "webColor #fc0fc0 ", colorsList("return webColor", "#fc0fc0"))
 print( "ярко-розовый ", colorsList("return palette", "ярко-розовый"))
 print( "ярко-розовый ", unpack(colorsList("return coronaPalette", "ярко-розовый")) )
 
 local list = colorsList"return palette"
-local count = 0
-local countRu = 0
-for k,v in pairs(list) do
-	if string.find(k, "[^a-z]") then
-		countRu = countRu + 1
-	else
+local count, countRu, colorsNames = 0, 0, {}
+for k in pairs(list) do
+	table.insert(colorsNames, k)
+	if string.match(k, "[a-z]+") then
 		count = count + 1
-		print(k)
+	else
+		countRu = countRu + 1
 	end
 end
 print(count, countRu)
+
+
+local nextColorName = display.newText( "", display.contentCenterX, 240, native.systemFont, 16 )
+local delay = 5000
+local function showNextBox()
+	local rect = display.newRect( display.contentCenterX, display.contentHeight + 100, display.contentWidth - 8 , 100 )
+	rect.strokeWidth = 4
+	local nextColorNumber = math.random(#colorsNames)
+	local nextColor = { colorsList( colorsNames[nextColorNumber]) }
+	local strokeColor = {}
+	for i = 1, 3 do
+		strokeColor[i] = 1 - nextColor[i]
+		if math.ceil(strokeColor[i]*10) == math.ceil(nextColor[i]*10) then
+			strokeColor[i] = 1
+		end
+	end
+	rect:setFillColor( unpack(nextColor) )
+	rect.stroke = strokeColor
+	nextColorName.text = [[next color is:
+]] .. colorsNames[nextColorNumber]
+	transition.to(rect, { time = delay, y = display.contentCenterY + 80,
+		onComplete = function()
+			rect:removeSelf()
+		end
+	})
+end
+
+showNextBox()
+showNextBoxTimer = timer.performWithDelay( delay, showNextBox, 0 )
