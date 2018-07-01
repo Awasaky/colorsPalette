@@ -19,7 +19,6 @@ Usage data of module
 ```
 local webColorFunc = palette"return webColor" -- assign webColor function to local variable webColorFunc
 local webPalette =  palette"return palette" -- assign palette of web colors to local variable webPalette
-
 local coronaSDKPalette = palette"return coronaPalette" --assign palette of Corona SDK colors  to local variable coronaSDKPalette
 
 print( colorsList("return webColor")("#fc0fc0") ) --0.98823529411765	0.058823529411765	0.75294117647059
@@ -45,6 +44,7 @@ object:setFillColor( palette("тёмно-оливковый"[, цветАльф�
 local webColorFunc = palette"return webColor" -- назначает функцию webColor локальной переменной webColorFunc
 local webPalette =  palette"return palette" -- назначает палитру веб цветов локальной переменной webPalette
 local coronaSDKPalette = palette"return coronaPalette" -- назначает палитру цветов Corona SDK colors цветов локальной переменной coronaSDKPalette
+
 print( colorsList("return webColor")("#fc0fc0") ) --0.98823529411765	0.058823529411765	0.75294117647059
 print( colorsList("return palette", "ярко-розовый")) --#fc0fc0
 print( unpack(colorsList("return coronaPalette", "ярко-розовый")) ) --0.98823529411765	0.058823529411765	0.75294117647059
