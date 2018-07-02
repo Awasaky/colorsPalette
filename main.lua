@@ -1,43 +1,53 @@
 --SAFEWORK = true
 math.randomseed( os.time() )
 
-local colorsList = require"colorsPalette"
+local colorName = require"colorsPalette"
 
--- каждый охотник желает знать где сидит фазан
-local rainbow = {"красный", "orange", "желтый", "green", "голубой", "blue", "фиолетовый" }
+--каждый охотник желает знать где сидит фазан
+--local rainbow = {"красный", "оранжевый", "желтый", "зеленый", "голубой", "синий", "фиолетовый"}
+--Richard Of York Gave Battle In Vain
+--local rainbow = {"red", "orange", "yellow", "green", "sky blue", "blue", "violet"}
+-- mixed names
+local rainbow = {"красный", "orange", "желтый", "green", "голубой", "blue", "фиолетовый"}
 
+-- draw rainbow
 for i = 1, #rainbow do
-	local rect = display.newRect( 35 + (i-1) * 40, 120, 40, 200 )
-	rect:setFillColor( colorsList(rainbow[i]) )
+	local rect = display.newRect(40+(i-1)*40, 120, 40, 200)
+	rect:setFillColor( colorName(rainbow[i]) )
 end
 
-print( colorsList"return webColor" )
-print( colorsList"return palette" )
-print( colorsList"return coronaPalette" )
-print( "webColor #fc0fc0 ", colorsList("return webColor", "#fc0fc0"))
-print( "ярко-розовый ", colorsList("return palette", "ярко-розовый"))
-print( "ярко-розовый ", unpack(colorsList("return coronaPalette", "ярко-розовый")) )
+-- Count web colors in module
+local listWeb = colorName"return paletteWeb"
+local totalWeb = 0
+for k in pairs(listWeb) do
+	totalWeb = totalWeb + 1
+end
 
-local list = colorsList"return palette"
-local count, countRu, colorsNames = 0, 0, {}
+-- Count names in module
+local list = colorName"return coronaPalette"
+local colorsNames = {}
+local total, count, countRu = 0, 0, 0
 for k in pairs(list) do
-	table.insert(colorsNames, k)
-	if string.match(k, "[a-z]+") then
+	total = total + 1
+	table.insert(colorsNames, k) -- insert name of color to colorsNames table
+	if k:find('^%a') then
 		count = count + 1
+		-- table.insert(colorsNames, k) -- to add only English names to colorsNames table
 	else
 		countRu = countRu + 1
+		-- table.insert(colorsNames, k) -- to add only Russian names to colorsNames table
 	end
 end
-print(count, countRu)
+print("Total Web colors", totalWeb, "English names", count, "Russian names", countRu, "Total colors", total)
 
-
-local nextColorName = display.newText( "", display.contentCenterX, 240, native.systemFont, 16 )
 local delay = 5000
-local function showNextBox()
-	local rect = display.newRect( display.contentCenterX, display.contentHeight + 100, display.contentWidth - 8 , 100 )
+local nextColorName = display.newText( "", display.contentCenterX, 240, native.systemFont, 16 )
+-- showRandomColoredBox display random color box, moving up, and show his color name and number in colorsNames
+local function showRandomColoredBox()
+	local rect = display.newRect(display.contentCenterX, display.contentHeight+100, display.contentWidth-8, 200)
 	rect.strokeWidth = 4
 	local nextColorNumber = math.random(#colorsNames)
-	local nextColor = { colorsList( colorsNames[nextColorNumber]) }
+	local nextColor = { colorName( colorsNames[nextColorNumber]) }
 	local strokeColor = {}
 	for i = 1, 3 do
 		strokeColor[i] = 1 - nextColor[i]
@@ -47,14 +57,14 @@ local function showNextBox()
 	end
 	rect:setFillColor( unpack(nextColor) )
 	rect.stroke = strokeColor
-	nextColorName.text = [[next color is:
-]] .. colorsNames[nextColorNumber]
-	transition.to(rect, { time = delay, y = display.contentCenterY + 80,
+	nextColorName.text = "next color is: " .. nextColorNumber .. " / " .. #colorsNames
+		.. "\n" .. colorsNames[nextColorNumber]
+	transition.to(rect, { time = delay, y = display.contentCenterY + 125,
 		onComplete = function()
 			rect:removeSelf()
 		end
 	})
 end
 
-showNextBox()
-showNextBoxTimer = timer.performWithDelay( delay, showNextBox, 0 )
+showRandomColoredBox()
+timer.performWithDelay( delay, showRandomColoredBox, 0 )

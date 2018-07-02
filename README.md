@@ -9,7 +9,11 @@ ENGLISH
 Color palette, names and definitions based on web colors in article:
 https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2
 
-Total number of colors 261 English names and 292 Russian names
+Total number of colors 216
+English names 235
+Russian names 330
+Total color names 565
+
 Usage:
 ```
 local palette = require"colorsPalette" -- use require to add module
@@ -21,14 +25,14 @@ If you enter wrong color name, function return white color with alpha = 1
 
 Also console show wrong color string.
 
-Usage data of module
+Usage another data of module
 ```
 local webColorFunc = palette"return webColor" -- assign webColor function to local variable webColorFunc
-local webPalette =  palette"return palette" -- assign palette of web colors to local variable webPalette
+local webPalette =  palette"return paletteWeb" -- assign palette of web colors to local variable webPalette
 local coronaSDKPalette = palette"return coronaPalette" --assign palette of Corona SDK colors  to local variable coronaSDKPalette
 
 print( colorsList("return webColor")("#fc0fc0") ) --0.98823529411765	0.058823529411765	0.75294117647059
-print( colorsList("return palette", "hot pink")) --#fc0fc0
+print( colorsList("return paletteWeb", "#fc0fc0")) -- return table with color names {"hot pink", "ярко-розовый"}
 print( unpack(colorsList("return coronaPalette", "hot pink")) ) -- -0.98823529411765	0.058823529411765	0.75294117647059
 ```
 RUSSIAN
@@ -36,11 +40,15 @@ RUSSIAN
 Цветовая палитра, имена и значения базируются на статье:
 https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2
 
-Общее число цветов - 261 английских имени и 292 русских имен
+Всего цветов 216
+Английских имен 235
+Русских имен 330
+Всего имен 565
+
 Использование:
 ```
 local palette = require"colorsPalette" -- используется require для подключения модуля
-object:setFillColor( palette("темно-оливковый"[, цветАльфаКанала]) ) -- имя цвета указывается в кавычках
+object:setFillColor( palette("тёмно-оливковый"[, цветАльфаКанала]) ) -- имя цвета указывается в кавычках
 ```
 Дополнительно можно задать цветАльфаКанала вещественным числом в диапазоне 0 - 1.
 
@@ -57,6 +65,6 @@ local webPalette =  palette"return palette" -- назначает палитру
 local coronaSDKPalette = palette"return coronaPalette" -- назначает палитру цветов Corona SDK colors цветов локальной переменной coronaSDKPalette
 
 print( colorsList("return webColor")("#fc0fc0") ) --0.98823529411765	0.058823529411765	0.75294117647059
-print( colorsList("return palette", "ярко-розовый")) --#fc0fc0
+print( colorsList("return paletteWeb", "#fc0fc0")) -- вернет таблицу с именами цвета {"hot pink", "ярко-розовый"}
 print( unpack(colorsList("return coronaPalette", "ярко-розовый")) ) --0.98823529411765	0.058823529411765	0.75294117647059
 ```
