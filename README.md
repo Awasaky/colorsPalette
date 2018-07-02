@@ -9,10 +9,10 @@ ENGLISH
 Color palette, names and definitions based on web colors in article:
 https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2
 
-Total number of colors 216
-English names 235
-Russian names 330
-Total color names 565
+Total number of colors 216.
+English names 235.
+Russian names 330.
+Total color names 565.
 
 Usage:
 ```
@@ -40,10 +40,10 @@ RUSSIAN
 Цветовая палитра, имена и значения базируются на статье:
 https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2
 
-Всего цветов 216
-Английских имен 235
-Русских имен 330
-Всего имен 565
+Всего цветов 216.
+Английских имен 235.
+Русских имен 330.
+Всего имен 565.
 
 Использование:
 ```
