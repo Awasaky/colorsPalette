@@ -1,0 +1,235 @@
+air force blue
+alice blue
+alizarin crimson
+almond
+amaranth
+amber
+american rose
+amethyst
+anti-flash white
+antique white
+apple green
+aquamarine
+army green
+arsenic
+asparagus
+aubergine
+azure
+battleship grey
+beige
+bistre
+bittersweet
+black
+blaze orange
+blond
+blue
+bluebottle
+bluet
+bluett
+bondi blue
+boston university red
+brass
+brick
+bright green
+bright turquoise
+bright violet
+bronze
+brown
+burgundy
+burnt orange
+burnt sienna
+burnt umber
+camel
+camouflage green
+canonical aubergine
+canonical eggplant
+cardinal
+carmine
+carrot
+celadon
+cerise
+cerulean
+cerulean blue
+chartreuse
+chocolate
+cinnamon
+cobalt
+copper
+coral
+corn
+cornflower
+cornflower blue
+cream
+crimson
+cyan
+cyan-blue
+dark blue
+dark brown
+dark cerulean
+dark chestnut
+dark coral
+dark goldenrod
+dark green
+dark indigo
+dark khaki
+dark olive
+dark pastel green
+dark peach
+dark pink
+dark salmon
+dark scarlet
+dark slate gray
+dark spring green
+dark tan
+dark tangerine
+dark tea green
+dark turquoise
+dark violet
+deep pink
+deep sky blue
+denim
+dodger blue
+eggplant
+emerald
+fawn
+fern green
+fire brick
+flax
+gamboge
+gold
+goldenrod
+gradus blue
+gray
+gray-asparagus
+gray-tea green
+green
+green-yellow
+heliotrope
+hot pink
+indian red
+indigo
+international orange
+jade
+khaki
+klein blue
+knapweed
+lace
+lavender
+lavender blush
+lawn green
+lemon
+lemon cream
+light brown
+lilac
+lime
+linen
+magenta
+malachite
+maroon
+mauve
+midnight blue
+mint green
+moss green
+mountbatten pink
+mustard
+navajo white
+navy
+ochre
+old gold
+old lace
+olive
+olive drab
+orange
+orchid
+pale blue
+pale brown
+pale carmine
+pale chestnut
+pale cornflower
+pale cornflower blue
+pale magenta
+pale mauve
+pale pink
+pale red-violet
+pale sandy brown
+pale yellow
+pang
+papaya whip
+pastel green
+pastel pink
+peach
+peach-orange
+peach-yellow
+pear
+periwinkle
+persian blue
+pine green
+pink
+pink-orange
+plum
+powder blue
+prussian blue
+puce
+pumpkin
+purple
+raw umber
+red
+red-violet
+robin egg blue
+rosy brown
+royal blue
+ruby
+russet
+rust
+safety orange
+saffron
+salmon
+sana
+sandy brown
+sangria
+sapphire
+scarlet
+school bus
+sea green
+seashell
+selective yellow
+sepia
+sienna
+silver
+sky blue
+slate gray
+spring green
+steel blue
+swamp green
+tan
+tangerine
+tea green
+teal
+tenne
+tenné
+thistle
+titian
+tomato
+transport red
+turquoise
+ubuntu orange
+ultramarine
+umber
+un blue
+united nations blue
+vanilla
+vermilion
+violet
+violet-aubergine
+violet-eggplant
+violet-red
+viridian
+wheat
+white
+wine
+wisteria
+xanadu
+yellow
+yellow-green
+zaffre
+zinnwaldite
